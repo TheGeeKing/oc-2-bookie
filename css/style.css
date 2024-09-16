@@ -140,7 +140,7 @@ a {
 
 .recherche input {
   border: none;
-  background-color: #ffffff;
+  background-color: white;
   color: black;
   font-size: 16px;
   padding: 10px;
@@ -152,10 +152,30 @@ a {
 .recherche button {
   background-color: var(--main-color);
   border: none;
-  color: #ffffff;
+  color: white;
   font-size: 16px;
   padding: 10px;
   border-radius: 0 0.75rem 0.75rem 0;
+}
+
+.recherche .fa-magnifying-glass {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .recherche .fa-magnifying-glass {
+    display: block;
+    background-color: var(--main-color);
+    /* gray shadow beneath the button */
+    box-shadow: 1px 3px 5px gray;
+    padding: 15px;
+    border-radius: 0.75rem;
+    color: white;
+  }
+
+  .recherche button {
+    display: none;
+  }
 }
 
 /****** Hebergements And Populaires ***********/
