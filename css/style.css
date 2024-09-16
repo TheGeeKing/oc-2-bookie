@@ -178,6 +178,34 @@ a {
   }
 }
 
+/****** Filtres ***********/
+.filtres {
+  display: flex;
+  margin: 10px 0;
+}
+
+.filtres button {
+  background-color: white;
+  border-color: rgb(182, 182, 182);
+  border: 2px solid #e8e8e8;
+
+  color: black;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 2rem;
+  margin-right: 10px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.filtres button * {
+  margin-right: 5px;
+}
+
+.filtres button:hover {
+  background-color: var(--filter-bg-color);
+}
+
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
   display: flex;
