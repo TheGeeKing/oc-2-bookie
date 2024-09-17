@@ -83,14 +83,13 @@ a {
 .header-nav a {
   margin-left: 30px;
   font-size: 16px;
-  color: var(--main-color);
   transition: all 0.3s ease-in-out;
 }
 
 .header-nav a:hover {
-  /* barre supérieure, bleu */
   border-top: 2px solid var(--main-color);
   padding-top: 5px;
+  color: var(--main-color);
 }
 
 /****** Recherche ***********/
@@ -446,10 +445,56 @@ footer {
     margin: 0 10px;
   }
 
+  /* General styles */
+  .header-nav {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    border-bottom: 1px solid #e5e5e5; /* Grey border beneath the tabs */
+  }
+
+  .header-nav a {
+    font-size: 18px;
+    padding: 10px 0;
+    color: black;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+    width: 50%;
+    text-align: center;
+  }
+
   .header-nav a:hover {
+    color: var(--main-color);
     border-top: none;
-    padding-top: 0;
-    border-bottom: 2px solid var(--main-color);
+  }
+
+  .header-nav:not(:hover) {
+    border-bottom: none;
+
+    /* remove underline if header-nav is not hovered */
+    .underline {
+      display: none;
+    }
+  }
+
+  /* Underline */
+  .underline {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    height: 3px;
+    width: 50%; /* Half width, since there are 2 tabs */
+    background-color: var(--main-color);
+    transition: left 0.3s ease-in-out;
+  }
+
+  /* Hover effect - Move the underline */
+  #tab1:hover ~ .underline {
+    left: 0; /* Move underline to the first tab */
+  }
+
+  #tab2:hover ~ .underline {
+    left: 50%; /* Move underline to the second tab */
   }
 
   .sub-header {
