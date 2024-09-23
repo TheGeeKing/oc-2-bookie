@@ -9,6 +9,10 @@
   --filter-bg-color: #deebff;
 }
 
+h1 {
+  font-size: 1.5em;
+}
+
 .fa-solid {
   color: var(--main-color);
 }
