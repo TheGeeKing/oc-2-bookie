@@ -16,6 +16,7 @@
 body {
   display: flex;
   justify-content: center;
+  margin: 0;
 }
 
 .main-container {
@@ -69,10 +70,11 @@ a {
 .header-logo {
   display: flex;
   align-items: center;
+  padding: 15px;
 }
 
 .header-logo img {
-  width: 50px;
+  width: 60px;
 }
 
 .header-nav {
@@ -83,13 +85,21 @@ a {
 .header-nav a {
   margin-left: 30px;
   font-size: 16px;
+  position: relative; /* Required for the overline effect */
   transition: all 0.3s ease-in-out;
 }
 
 .header-nav a:hover {
-  border-top: 2px solid var(--main-color);
-  padding-top: 5px;
   color: var(--main-color);
+}
+
+.header-nav a:hover::before {
+  content: "";
+  position: absolute;
+  top: -15px; /* Moves the border to just below the top of the body */
+  width: 100%;
+  height: 2px;
+  background-color: var(--main-color);
 }
 
 /****** Recherche ***********/
@@ -450,7 +460,7 @@ footer {
     display: flex;
     justify-content: space-around;
     position: relative;
-    border-bottom: 1px solid #e5e5e5; /* Grey border beneath the tabs */
+    border-bottom: 3px solid #e5e5e5; /* Grey border beneath the tabs */
   }
 
   .header-nav a {
@@ -469,7 +479,7 @@ footer {
   }
 
   .header-nav:not(:hover) {
-    border-bottom: none;
+    /* border-bottom: none; */
 
     /* remove underline if header-nav is not hovered */
     .underline {
@@ -480,7 +490,7 @@ footer {
   /* Underline */
   .underline {
     position: absolute;
-    bottom: -1px;
+    bottom: -3px;
     left: 0;
     height: 3px;
     width: 50%; /* Half width, since there are 2 tabs */
