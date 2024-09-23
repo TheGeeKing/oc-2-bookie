@@ -492,9 +492,11 @@ footer {
     border-top: none;
   }
 
-  .header-nav:not(:hover) {
-    /* border-bottom: none; */
+  .header-nav a:hover::before {
+    content: none; /* Removes the hover effect entirely */
+  }
 
+  .header-nav:not(:hover) {
     /* remove underline if header-nav is not hovered */
     .underline {
       display: none;
