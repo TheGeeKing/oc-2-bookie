@@ -462,7 +462,6 @@ footer {
 
   .header-nav {
     justify-content: space-around;
-    margin-top: 20px;
     width: 100%;
   }
   .header-nav a {
@@ -554,6 +553,9 @@ footer {
   }
 
   /****** Filtres ***********/
+  #filtres-parent .section-title {
+    margin-left: 4%;
+  }
   /* 2 rows of 2 filters */
   .filtres {
     gap: 10px 0;
@@ -633,6 +635,10 @@ footer {
   }
 
   /****** Activités ***********/
+  #activites .section-title {
+    margin-left: 8%;
+  }
+
   .activites-cards {
     flex-direction: column;
     gap: 15px;
